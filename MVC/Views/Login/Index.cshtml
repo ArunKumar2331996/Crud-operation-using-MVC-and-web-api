@@ -1,0 +1,23 @@
+﻿@model MVC.Models.Login
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Index", "Login", FormMethod.Post))
+{
+<table>
+    <tr>
+        <td><label id="lblUName">Enter Username</label> </td>
+        <td>@Html.TextBoxFor(x => x.UName)</td>
+    </tr>
+    <tr>
+        <td><label id="lblPwd">Enter Password</label> </td>
+        <td>@Html.TextBoxFor(x => x.Password)</td>
+    </tr>
+    <tr>
+        <td><input type="submit" id="btnLogin" value="Submit" /> </td>
+    </tr>
+</table>
+}
+
